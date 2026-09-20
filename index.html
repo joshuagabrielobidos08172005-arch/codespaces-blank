@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text-Based Game Using HTML, CSS and JavaScript</title>
+    <style>
+
+        body {
+            background-color: lightblue;
+        }
+        #header1 {
+            text-align: center;
+        }
+
+        #how-to-play {
+            max-width: 600px;
+            box-sizing: border-box;
+            margin: 10px auto;
+            text-align: center;
+            background-color: lightpink;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        #how-to-play ul,#how-to-play ol {
+            display: table;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        #how-to-play table {
+            border-collapse: collapse;
+            margin: 0 auto;
+        }
+
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .play-button {
+            align: center;
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 24px;
+            background-color: purple;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .play-button:hover {
+            background-color: indigo;
+        }
+
+        th, td {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="header1">Hello Everyone! Welcome to the annual Wizardry Competition</h1>
+    <section id="how-to-play">
+        <h2>How to Play</h2>
+        <p>You are a wizard locked in a duel with a rival sorcerer. Cast spells by solving math problems before the timer runs out!</p>
+        <h3>Stats</h3>
+            <ul>
+                <li>Both wizards start with <strong>100 HP</strong>.</li>
+                <li>You start with <strong>60 mana</strong>.</li>
+            </ul>
+        <h3>Casting a Spell</h3>
+            <ol>
+                <li>Click <strong>Cast</strong>. This costs <strong>5 mana</strong>, and mana is never refunded.</li>
+                <li>A window opens with <strong>10 seconds</strong> on the clock.</li>
+                <li>Solve <strong>3 math problems</strong>, one at a time (addition, subtraction, multiplication, division).</li>
+                <li>If time runs out, your spell <strong>fizzles</strong>, even if you answered some correctly.</li>
+            </ol>
+
+        <h3>Spell Damage</h3>
+            <table>
+                <tr><th>Correct Answers  </th><th>Damage</th></tr>
+                <tr><td>3</td><td>15</td></tr>
+                <tr><td>2</td><td>5</td></tr>
+                <tr><td>1</td><td>3</td></tr>
+                <tr><td>0</td><td>Fizzle (0)</td></tr>
+            </table>
+
+        <h3>Magic Frenzy</h3>
+            <p>Cast <strong>3 perfect spells in a row</strong> (all 3 answers correct each time) to trigger Magic Frenzy. Your next spell deals <strong>+5 bonus damage</strong>. Miss even one answer and your streak resets. The bonus does not help a fizzled spell.</p>
+
+        <h3>The Rival Wizard</h3>
+            <p>Every round, the rival hits you for <strong>10 damage</strong>, no matter what happens.</p>
+
+        <h3>Winning and Losing</h3>
+            <ul>
+                <li><strong>Win:</strong> bring the rival to 0 HP.</li>
+                <li><strong>Lose:</strong> your HP reaches 0, or you run out of mana.</li>
+                <li><strong>Draw:</strong> you both reach 0 HP in the same round. There is no winner.</li>
+            </ul>
+    </section>
+    
+    <div class="button-container">
+    <a href="game.html" class="play-button">Start the Duel!</a>
+    </div>
+</body>
+</html>
